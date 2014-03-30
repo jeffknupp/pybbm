@@ -21,11 +21,14 @@
     {% endif %}
     {% if user.is_authenticated %}
         <div id='mark-all-as-read'>
-            <a href='{% url 'pybb:topic_latest' %}'>
-                {% trans "Last updates in topics" %}
+            <a href='{% url 'pybb:topic_latest' %}'><button class="btn btn-success">
+                {% trans "Latest Posts" %}
+            </button>
             </a>
             <a href='{% url 'pybb:mark_all_as_read' %}'>
-                {% trans "Mark all forums as read" %}
+                <button class="btn btn-info">
+                {% trans "Mark All Read" %}
+            </button>
             </a>
         </div>
     {% endif %}
