@@ -4,7 +4,7 @@
 
 {% load pybb_tags i18n %}
 
-{% block title %}{% trans "Last updates in topics" %}{% endblock title %}
+{% block title %}{% trans "Latest updates" %}{% endblock title %}
 
 {% block breadcrumb %}
     {% with extra_crumb=_("Last updates in topics") %}
@@ -13,8 +13,10 @@
 {% endblock %}
 
 {% block content %}
-    <div class="forum">
-        <h1>{% trans "Last updates in topics" %}</h1>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h1>{% trans "Latest updates" %}</h1>
+    </div>
         {% if forum.headline %}
             <div class="forum-headline alert alert-block">
                 {{ forum.headline|safe }}
@@ -35,4 +37,5 @@
             </div>
         {% endif %}
     </div>
+</div>
 {% endblock content %}
